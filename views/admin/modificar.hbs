@@ -1,0 +1,104 @@
+<div class="container" style="margin-top: 20px;">
+
+    <div class="row col-12 mx-auto">
+
+        <h2 style="margin-bottom: 25px; text-align:center">Modificar novedad</h2>
+
+        <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
+            {{!-- eso se pone cuando hay un archivo andjunto enctype="multipart/form-data" --}}
+
+            <input type="hidden" value="{{novedad.id}}" name="id">
+            {{!-- el name recibe el id. aca tengo el id de la novedad que voy a modificar. Este dato no se debe ver ni
+            modificar. --}}
+
+            <div class="modificar-flex">
+                <label for="" class="modificar-label modificar-flex-center"> <b>Organizador:</b> </label>
+                <input type="text" class="form-control" placeholder="Título" name="titulo" value="{{novedad.titulo}}">
+            </div>
+
+            <div class="modificar-flex">
+                <label for="" class="modificar-label"><b>Descripción:</b></label>
+                <textarea class="form-control" placeholder="Subtitulo" name="subtitulo"
+                    rows="4">{{novedad.subtitulo}}</textarea>
+            </div>
+
+            <div class="modificar-flex">
+                <label for="" class="modificar-label modificar-flex-center"><b>Fecha limite:</b> </label>
+                <input type="text" class="form-control" name="vencimiento" placeholder="dd/mm/aaaa"
+                    value="{{novedad.vencimiento}}">
+            </div>
+
+
+            <div class="modificar-flex" style="margin-bottom: 0;">
+                <label for="" class="modificar-label modificar-flex-center"> <b>Imagen nueva:</b> </label>
+                <input type="file" class="form-control" id="Imagen" name="imagen">
+            </div>
+
+
+
+            <div class="modificar-flex">
+                <label for="" class="modificar-label modificar-flex-center"> </label>
+                <label for="" class="label-check-eliminar">
+                    <input type="checkbox" id="img_delete" name="img_delete" value="1">
+                    Eliminar la imagen
+                </label>
+
+                <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+            </div>
+
+            {{#if imagen_url}}
+            <div class="modificar-flex">
+                <label for="" class="modificar-label modificar-flex-center"> <b>Imagen original:</b> </label>
+                <p style="width:18%; margin: 8px 0; padding:12px 0 ; border: 1px solid #000">
+
+                    <img src="{{imagen_url}}" alt="">
+                </p>
+            </div>
+            {{/if}}
+
+
+            <div style="margin: 20px 0;">
+                <label for="" class="modificar-label"> <b>Cuerpo:</b></label>
+                <textarea class="form-control" id="mytextarea" placeholder="Cuerpo" name="cuerpo"
+                    rows="20">{{novedad.cuerpo}}</textarea>
+            </div>
+
+            <div class="modificar-flex" style="margin-bottom: 15px;">
+                <label for="" class="modificar-label modificar-flex-center"> <b>Url para la inscripción:</b> </label>
+                <input type="url" class="form-control" placeholder="http://www.ejemplo.com" name="url"
+                    value="{{novedad.url}}">
+            </div>
+
+            <div class="d-flex justify-content-around">
+                <button type="submit" class="boton" style="width: 48%;"><b> Modificar </b></button>
+                <a href="/admin/novedades/" class="boton" style="width: 48%;"><b> Cancelar </b></a>
+            </div>
+
+            {{#if error}}
+            <p class="error-user">{{message}}</p>
+            {{/if}}
+
+        </form>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+<script src="https://cdn.tiny.cloud/1/ec5thtww0fgpwlqal086rkntodyx71mldx35ovrkxzvtda36/tinymce/5/tinymce.min.js"
+    referrerpolicy="origin"></script>
+
+<script>
+
+    tinymce.init({
+        selector: '#mytextarea',
+        plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+        toolbar_mode: 'floating',
+    });
+
+</script>

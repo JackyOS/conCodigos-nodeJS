@@ -1,0 +1,41 @@
+<main class="novedades holder">
+
+    <p class="p-frase-bienvenida">Aquí encontraras cursos o capacitaciones gratuitas organizadas por empresas o instituciones públicas. <br> Estate alerta, las ofertas tienen fecha límite y  las vacantes suelen ser limitadas. <br> ¡Suerte! </p>
+
+    {{!-- <h2>Novedades</h2> --}}
+
+    {{#each novedades}}
+
+    <div class="columna">
+
+        <h3>{{titulo}}</h3>
+        <h4>{{subtitulo}}</h4>
+        <h4>Fecha limite: {{vencimiento}}</h4>
+        <img width="500" src="{{imagen}}" alt="{{titulo}}">
+        <p>{{{cuerpo}}}</p>
+        {{!-- dos llaves trae la info tal cual --}}
+        {{!-- tres llaves, toma las etiquetas html que pusimos en localhost php, tabla novedades --}}
+        {{!-- ver video, clase 22, hora 1:08 --}}
+        {{!-- tiny https://blog.aulaformativa.com/herramientas-incluir-editor-wysiwyg/
+        --}}
+
+        <a href="{{url}}" class="boton" target="_blank">Inscribite</a>
+
+        {{!--
+        <hr> --}}
+    </div>
+
+
+    {{/each}}
+
+
+
+
+
+    <a href="#" class="scroll-up">
+        <span class="fa fa-chevron-up"> Volver arriba </span>
+    </a>
+</main>
+
+
+  

@@ -1,0 +1,815 @@
+body {
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;   /*tamaño de la fuente*/
+    line-height: 20px; /*separación entre linea y linea de texto*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    background-color: #ffffff;
+    /* el alto y el ancho de los contenedores incluyen el paddind sin alterar el width/height  */
+    
+}
+
+.holder {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+
+
+/* -----------------------HEADER------------------------------ */
+
+.header {
+    background-color: #34495E ;
+    color: #fff;
+    padding: 5px;
+}
+
+.contenedor-header  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-header {
+    display: flex;
+}
+
+.texto-logo-header {
+    margin-top: 10px;
+    margin-left: 3px;
+    width: 65%;
+}
+
+.texto-logo-header h1 {
+    letter-spacing: 8px;
+    line-height: 25px;
+    font-size: 25px;
+    margin: 0;
+}
+
+.texto-logo-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #eb9411;
+    font-style: italic;
+}
+
+/* --------------------------NAV------------------------- */
+
+nav ul {
+    list-style: none; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 5px;
+    margin: 0 3px;
+    font-size: 22px;
+}
+
+
+nav ul li a {
+    padding: 0 5px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li:hover{
+    border-bottom: 2px solid rgb(206, 141, 22);
+    color: #000;
+}
+
+.activo {
+    border-bottom: 2px solid rgb(206, 141, 22);
+    color: #000;
+
+}
+
+
+/*------------------ nav responsive ------------------*/
+
+nav #icon {
+    color: #fff;
+    font-size: 30px;
+    line-height: 80px;
+    justify-content: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+nav #icon2 {
+    display: none;
+}
+
+
+
+/* ------------------ span "volver arriba"---------------- */
+
+html {
+    scroll-behavior:smooth;
+    /* esto es para que el scroll se haga suave cuando se toca el "volver arriba" */
+}
+
+.scroll-up {
+    visibility: hidden;
+    position: sticky;
+    text-decoration: none;
+    top: 95%;
+    left: 90%;
+    opacity: 0.8;
+}
+
+.fa-chevron-up{
+    background-color: #1A1B1F;
+    color: #fff;
+    padding: 7px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+
+}
+
+
+/* -----------------------INDEX----MAIN-------------------------- */
+
+
+.imagenDestacada {
+    background-image: linear-gradient(to top, rgba(80, 83, 89, 0.699) 0%, rgba(194, 217, 251, 0.699) 100%) , url("https://c.pxhere.com/photos/b4/46/coding_programming_working_macbook_laptop_technology_office_desk-860609.jpg!d");
+    width: 100%;
+    height: 88vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.onda-main{
+    overflow: hidden;
+    height: 12vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.texto-imagen{
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+}
+
+.texto-imagen h2 {
+    text-align: center;
+    font-size: 55px;
+    line-height: 70px;
+    margin-bottom: 0;
+}
+
+.texto-imagen h3 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.boton {
+    text-align: center;
+    color:#1A1B1F;
+    padding: 15px 10px;
+    /* margin-bottom: 10px; */
+    text-decoration: none;
+    color:#30353B;
+    display: inline-block; /*para no tener problema al usar el margin y el padding*/
+    background: linear-gradient(180deg,#eba439 0%, #e6a958 100%);
+    font-weight: 700;
+    border-radius:6px;
+    transition: all .5s;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover{
+    background: linear-gradient(180deg,#ffb951 0%, #ff950b 100% );
+    color: rgb(5, 5, 5);
+    /* letter-spacing: 1px; */
+}
+
+
+
+
+.contenedor-ruta {
+    text-align: center;
+}
+
+.img-ruta {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.btn__index__ruta{
+    margin: 0 20px;
+}
+
+
+/* ------------------------CURSOS----------------------------- */
+
+/* Guia */
+.p-frase-bienvenida{
+    /* background-color:#eb9411; */
+    background-color: #e6a958;
+    color: #335176;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px ;
+    line-height: 24px;
+    border-radius: 5px ;
+    font-style: italic;
+    font-weight: 400;
+
+}
+
+
+.ul-guia-cursos {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+}
+
+.ul-guia-cursos li{
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    font-weight: 700;
+    padding: 10px ;
+    /* transition: all 0.5s ease; */
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+
+.ul-guia-cursos li.active{
+    background-color: #ec8f16;
+}
+
+
+
+/* Contenedor */
+
+.contenedor-curso{
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+.contenedor-curso.active {
+    display: block;
+}
+
+.contenedor-curso h2 {
+    font-size: 40px;
+    text-align: center;
+    margin: 15px 0;
+
+}
+
+.subtiulo-p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    /* text-align: justify; */
+    line-height:25px;
+    color: #30353B
+}
+
+
+.contenedor-tarjetas { 
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tarjeta-curso {
+    background: linear-gradient(180deg,#335176 0%, #1A1B1F 100%) ;
+    border-radius: 10px;
+    max-width: 330px;
+    min-width: 250px;
+    flex-grow: 1;
+    margin: 0 5px 25px;
+    padding: 15px 5px;
+    text-align: center;
+    box-shadow: 0 2px 15px #000; 
+    transition: transform 0.6s;
+  
+}
+
+
+.tarjeta-curso:hover{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    transform: scale(1.03);
+    /* cursor: pointer; */
+}
+
+.tarjeta-img {
+    width: 95%;
+    height: 25vh;
+    border-radius: 10px;
+}
+
+.tarjeta-texto {
+   padding: 0 5px;
+   /* height: 20vh; */
+   
+}
+
+.tarjeta__titulo {
+    color: #fff;
+    font-size: 35px;
+    /* line-height: 35px; */
+    margin: 15px 0 5px;
+
+}
+
+.tarjeta__p {
+    color: #f7d9d990;
+    font-weight: 300;
+}
+
+
+/* -------------------------Novedades----------------------- */
+
+
+.novedad {
+    /* border: 2px solid #000; */
+    padding: 20px;
+    box-shadow: 0px 0px 6px -2px #333333;
+    border-radius: 2px;
+    background-color: #fff;
+    margin: 25px 0;
+}
+
+.novedad h3 {
+    margin-top: 0;
+}
+
+.img-novedades {
+    width: 100%;
+    margin: 0;
+}
+
+
+/*-------------------- Contacto ---------------- */
+
+.columna {
+    margin: 35px auto;
+    padding: 15px;
+    box-shadow: 0px 0px 6px -2px #333333;
+    text-align: center;
+}
+
+.formulario{
+    margin: 10px auto;
+    width: 80%;
+}
+
+.formulario .p__input__contacto {
+    margin: 5px 0px;
+    width: 100%;
+}
+
+.formulario .p__input-nombre-email{
+    display: flex;
+}
+
+.textarea__contacto, .select__contacto, .input__contacto {
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.formulario .p__input__contacto .input__contacto:first-child {
+    margin-right: 5px;
+}
+
+.input__contacto, .select__contacto, .textarea__contacto {
+    background-color: #34495E;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.input__contacto:focus, .textarea__contacto {
+    border-bottom: 3px solid #ebac00;
+}
+
+.input__contacto::placeholder, .formulario select option, .textarea__contacto::placeholder {
+    color: #ebac0090;
+}
+
+.textarea__contacto{
+    resize: none;
+    margin-bottom: 0;
+}
+
+.accion {
+    margin-top: 10px;
+}
+
+.btn_form {
+    width: 100%;
+}
+
+.mensaje-form-enviado {
+    color:rgb(43, 194, 5);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.activo-btn {
+    display:none ;
+}
+
+
+
+/* ---------------------footer -------------------------*/
+
+footer {
+    /* background-color: rgb(53, 54, 63); */
+    background-color: #111;
+    /* color: #c4a52b; */
+    color: #ec8f16;
+    font-weight: 700;
+    padding: 5px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contenedor__footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.redes-sociales__footer {
+    width: 47%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    max-width: 500px;
+}
+
+.redes-sociales__siguenos__footer {
+    margin-top: 30px;
+}
+
+.redes-sociales__icon__footer{
+    font-size: 35px;
+    margin: 5px 0;
+    color: #30353B;
+}
+
+.redes-sociales__icon__footer:hover{
+    color: #4a4c4e;
+}
+
+.subscribete__footer{
+    width: 47%;
+}
+
+.subscribete__footer h3 {
+    font-size: 16px;
+}
+
+/* .form__footer {
+*/
+
+.inputEmail__form__footer{
+    border: 1px solid #eb9411;
+    border-radius: 6px ;
+    font-size: 15px;
+    outline: none;
+
+    padding: 15px 10px;
+    font-weight: 700;
+    background-color: inherit;
+    color: #fff;
+}
+
+.inputEmail__form__footer:focus {
+    background-color: #1f1f1f;
+}
+
+.inputSubmit__form__footer{
+    border: none;
+    margin-left: 8px;
+}
+
+.p__footer{
+    font-size: 15px;
+    padding: 10px;
+    margin: 20px auto 10px;
+    border-top: 2px solid #eb9411;
+    width: 50%;
+}
+
+/*------------- ERROR---------- */
+
+
+
+.error-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #eb9411; */
+    padding: 20px;
+}
+
+.error-container img {
+    width: 100px;
+    margin-right: 50px;
+}
+
+
+@media screen and (max-width:860px) {
+
+    /* --------HEADER ---- NAV--------------- */
+
+    nav #icon {
+        display: block;
+        padding: 0 2px;
+        text-align: end;
+    }
+
+    nav ul{
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 90vh;
+        display: none;
+    }
+
+    nav ul li{
+        padding: 20px;
+        /* margin-bottom: 10px; */
+        font-size: 36px;
+        text-align: center;
+    }
+     
+
+    /* --------------------css+js------------------ */
+    body.noScroll {
+        overflow-x:hidden; 
+        overflow-y:hidden;
+    }
+
+    .nav.cien {
+        width: 100%;
+    }
+
+    .nav-ul.activado{
+        display: flex; 
+    }
+
+    .logo-header.none {
+        display: none;
+    }
+
+
+
+    
+    /* ---------------------main-----index------------ */
+
+    .texto-imagen h2 {
+        font-size: 50px;
+        line-height: 60px;
+    }
+    
+    .texto-imagen h3 {
+        font-size: 35px;
+        margin-bottom: 30px;
+    }
+
+
+
+
+    /*------------------------CURSOS-------------- */
+
+    .contenedor-curso h2 {
+        font-size: 37px;
+        line-height: 35px;
+    }
+
+    .tarjeta-curso {
+        width: 100%;
+        max-width: 650px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .subtiulo-p {
+        width: 90%;
+        font-size: 18px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tarjeta-img {
+        width: 45%;
+        height: 27vh;
+    }
+
+    .tarjeta__titulo {
+        font-size: 27px;
+        line-height: 35px;
+        margin: 5px 0;
+    }
+    
+    .tarjeta-texto {
+        width: 50%;
+        margin: 0;
+    }
+
+
+    /* ---------Contacto--------- */
+
+    .formulario{
+        width: 90%;
+    }
+
+    /*------------------Footer------------- */
+    .contenedor__footer{
+        flex-wrap: wrap-reverse;  
+    }
+
+
+    .redes-sociales__footer, .subscribete__footer {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:590px) {
+
+    .scroll-up {
+        visibility:visible;
+    }
+
+    /* --------------HEADER----------- */
+
+    header div h1 {
+        letter-spacing: 5px;
+        line-height: 10px;
+        font-size: 16px;
+    }
+    
+    header div p {
+        display: none;
+    }
+
+    header img {
+        width: 45px;
+    }
+
+    /* ----------INDEX--main---------------- */
+
+    .texto-imagen h2 {
+        font-size: 45px;
+    }
+    
+    .texto-imagen h3 {
+        font-size: 30px;
+    }
+
+    /* -------------CURSO------------- */
+    .ul-guia-cursos {
+        flex-wrap: wrap;
+    }
+
+    .ul-guia-cursos li{
+        width: 30%;
+        flex-grow: 1;
+    }
+
+    .subtiulo-p {
+     font-size: 16px;
+    }
+
+    .contenedor-curso h2 {
+        font-size: 30px;    
+    }
+    
+    .contenedor-tarjetas {
+        width: 90%;
+        margin: 0px auto;
+    }
+
+    .tarjeta-curso {
+        display: block;
+        max-width: 400px;
+    }
+
+    .tarjeta-img {
+        width: 95%;
+        height: 30vh;
+    }
+
+    .tarjeta__titulo {
+        font-size: 23px;
+    }
+
+    .tarjeta-texto {
+        width: 95%;
+    }
+
+
+ 
+
+}
+
+
+@media screen and (max-width:479px) {
+
+
+    /* --------------GENERALES----------- */
+
+    .boton {
+        padding: 12px 8px;
+        font-size: 15px;
+    }
+
+    /* --------INDEX------main--------- */
+
+
+    .texto-imagen h2 {
+        font-size: 38px;
+        line-height: 45px;
+        margin-bottom: 10px;
+    }
+    
+    .texto-imagen h3 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+
+    /*-------------CURSO------------- */
+
+    .contenedor-cursos h2 {
+        font-size: 25px;
+        line-height: 25px;    
+    }
+
+    .contenedor-tarjetas {
+        width: 95%;
+    }
+
+    .tarjeta-img {
+        height: 28vh;
+    }
+
+    /* ---------Contacto--------- */
+
+
+    .formulario .p__input__contacto {
+        display: block;
+    }
+
+    .formulario .p__input__contacto input {
+        margin: 5px 0;
+    }
+
+    /* ---------Footer------- */
+
+    .inputEmail__form__footer {
+        width: 50%;
+        padding: 12px 10px;
+    }
+}
+
+

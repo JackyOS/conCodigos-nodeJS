@@ -1,0 +1,49 @@
+<main class="contenedor-contacto holder">
+
+    <div class="columna">
+        <h2>Contactanos</h2>
+
+        <p>Cualquier idea, sugerencia, curso o tutorial web que quieras aportar nos sirve para seguir agrandando esta
+            página educativa que tiene como fin ser el punto de partida para todas aquellas personas que quieran
+            estudiar la programación pero no saben por donde empezar o no tienen los recursos necesarios para realizar
+            una carrera universitaria o un curso pago.</p>
+
+        <h3>¡Esperamos tu mensaje!</h3>
+
+
+        <form class="formulario" action="/contacto" method="post">
+        {{!-- action: contacto --> cuando toco enviar en el submit, va al contacto.js donde se va a realizar alguna acción con esos datos--}}
+        {{!-- post(envia la info) : los datos pasan de forma oculta --}}
+
+
+            <p class="p__input__contacto p__input-nombre-email">
+                <input type="text" class="input__contacto" placeholder="Nombre" required name="nombre">
+
+                <input type="email" class="input__contacto" placeholder="Email" required name="email">
+            </p>
+
+            <p class="p__input__contacto p__input_select">
+
+                <select class="select__contacto" name="motivo" id="">
+                    <option class="opcion-uno" value="">--Motivo de consulta--</option>
+                    <option value="curso-web">Aportar un curso web</option>
+                    <option value="pasantia">Aportar una pasantía</option>
+                    <option value="sugerencias">Sugerencias</option>
+                    <option value="otro">Otro motivo</option>
+                </select>
+            </p>
+
+            <p class="p__input__contacto p__input-textarea">
+                <textarea name="comentario" id="" cols="30" rows="10" placeholder="Escribe aquí..."
+                    class="textarea__contacto"></textarea>
+            </p>
+
+            <p class="accion">
+                <input type="submit" class="boton btn_form {{#if message}}activo-btn{{/if}}" value="Enviar">
+            </p>
+        </form>
+
+        <p class="mensaje-form-enviado">{{message}}</p>
+    </div>
+
+</main>

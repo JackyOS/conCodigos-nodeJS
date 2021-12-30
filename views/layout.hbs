@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+  <link rel="shortcut icon" href="images/ico-luz.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+  <script src="https://kit.fontawesome.com/41535d3f48.js" crossorigin="anonymous"></script>
+  <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="stylesheets/normalize.css">
+  <link rel="stylesheet" href="stylesheets/conCodigos.css">
+  <title>{{title}}</title>
+</head>
+
+
+<body class="body">
+
+
+  <header class="header">
+    <div class="contenedor-header holder">
+
+      <div class="logo-header">
+        <img class="img-logo" width="70" src="images/logo1.png" alt="Logo Con codigos">
+        <div class="texto-logo-header">
+          <h1>CON CODIGOS</h1>
+          <p>El A B C de la programación</p>
+        </div>
+
+      </div>
+
+      <nav class="nav">
+        <label class="icon" id="icon">
+          <i class="fas fa-bars"></i>
+        </label>
+
+        <!-- <label class="icon2" id="icon2">
+                <i class="fas fa-times"></i>
+              </label> 
+        -->
+
+        <ul class="nav-ul holder">
+
+
+          <li class="item {{#if isHome}}activo{{/if}}"><a href="/">Inicio</a></li>
+          <li class="item {{#if isCursos}}activo{{/if}}"><a href="/cursos">Cursos</a></li>
+          <li class="item {{#if isNovedades}}activo{{/if}}"><a href="/novedades">Novedades</a></li>
+          <li class="item {{#if isContacto}}activo{{/if}}"><a href="/contacto">Contacto</a></li>
+
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  {{{body}}}
+
+
+
+  <footer>
+    <div class="contenedor__footer holder">
+
+      <div class="redes-sociales__footer">
+        <p class="redes-sociales__siguenos__footer"> Siguenos en:</p>
+
+        <p>
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class='redes-sociales__icon__footer bx bxl-facebook-circle'></i>
+          </a>
+        </p>
+
+        <p>
+          <a href="https://www.linkedin.com/" target="_blank">
+            <i class='redes-sociales__icon__footer bx bxl-linkedin-square'></i>
+          </a>
+
+        </p>
+
+        <p>
+          <a href="https://twitter.com/" target="_blank">
+            <i class='redes-sociales__icon__footer bx bxl-twitter'></i>
+          </a>
+        </p>
+
+        <p>
+          <a href="https://www.instagram.com/" target="_blank">
+            <i class='redes-sociales__icon__footer bx bxl-instagram'></i>
+          </a>
+
+        </p>
+
+        <p>
+          <a href="https://github.com/" target="_blank">
+            <i class='redes-sociales__icon__footer bx bxl-github'></i>
+          </a>
+
+        </p>
+
+
+      </div>
+
+      <div class="subscribete__footer">
+        <h3>Recibe todas las novedades:</h3>
+        <form action="" class="form__footer">
+          <input type="email" class="inputEmail__form__footer" placeholder="Escribe tu email" required>
+          <input type="submit" class="inputSubmit__form__footer boton" value="Subscríbete">
+        </form>
+      </div>
+
+
+    </div>
+
+    <p class="p__footer">Creado y diseñado por @JackyOS</p>
+
+  </footer>
+
+  <script src="javascripts/codigo.js"></script>
+</body>
+
+
+
+
+</html>

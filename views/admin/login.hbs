@@ -1,0 +1,27 @@
+<div class="container" style="margin-top: 50px;">
+
+    <div class="row col-4 mx-auto">
+
+        <form action="/admin/login" method="post">
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Usuario" name="usuario">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Contraseña" name="password">
+            </div>
+            <div class="d-grid mx-auto">
+                <button type="submit" class="boton"><b> Ingresar </b></button>
+            </div>
+
+            {{#if error}}
+            <p class="error-user">El usuario y/o la contraseña ingresados son incorrectos</p>
+            {{/if}}
+
+        </form>
+
+
+
+    </div>
+
+
+</div>

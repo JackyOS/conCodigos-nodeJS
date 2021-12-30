@@ -1,0 +1,71 @@
+<div class="holder" style="margin-top: 20px;">
+
+    <div class="row col-12 mx-auto">
+
+        <h2 style="margin-bottom: 25px; text-align:center">Agregar novedad</h2>
+
+        <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
+
+            <div class="modificar-flex">
+                <label for="" class="modificar-label modificar-flex-center"> <b>Organizador:</b> </label>
+                <input type="text" class="form-control" placeholder="Escribe el título..." name="titulo">
+            </div>
+
+            <div class="modificar-flex">
+                <label for="" class="modificar-label"><b>Descripción:</b></label>
+                <textarea class="form-control" placeholder="Escribe el subtitulo..." name="subtitulo"
+                    rows="4"></textarea>
+            </div>
+
+            <div class="modificar-flex">
+                <label for="" class="modificar-label modificar-flex-center"><b>Fecha límite:</b> </label>
+                <input type="text" class="form-control" name="vencimiento" placeholder="dd/mm/aaaa">
+            </div>
+
+            <div class="modificar-flex">
+                <label for="" class="modificar-label modificar-flex-center"> <b>Imagen:</b> </label>
+                <input type="file" class="form-control" placeholder="Imagen" name="imagen">
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <label for="" class=""> <b>Cuerpo:</b></label>
+                <textarea id="mytextarea" class="" placeholder="Escribe el contenido principal aqui..." name="cuerpo"
+                    rows="20"></textarea>
+            </div>
+
+            <div class="modificar-flex">
+                <label for="" class="modificar-label modificar-flex-center"> <b>Url para la inscripción:</b> </label>
+                <input type="url" class="form-control" placeholder="http://www.ejemplo.com" name="url">
+            </div>
+
+            <div class="modificar-flex justify-content-around">
+                <button type="submit" class="boton" style="width: 48%;"><b> Guardar </b></button>
+                <a href="/admin/novedades/" class="boton" style="width: 48%;"><b> Cancelar </b></a>
+            </div>
+
+            {{#if error}}
+            <p class="error-user">{{message}}</p>
+            {{/if}}
+
+        </form>
+
+    </div>
+
+
+</div>
+
+
+
+
+<script src="https://cdn.tiny.cloud/1/ec5thtww0fgpwlqal086rkntodyx71mldx35ovrkxzvtda36/tinymce/5/tinymce.min.js"
+    referrerpolicy="origin"></script>
+
+<script>
+
+    tinymce.init({
+        selector: '#mytextarea',
+        plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+        toolbar_mode: 'floating',
+    });
+
+</script>
